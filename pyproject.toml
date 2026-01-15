@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tla2528"
+version = "0.1.0"
+description = "Python library for TLA2528 ADC on Raspberry Pi and Linux"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+keywords = ["tla2528", "adc", "i2c", "raspberry-pi", "sensor", "analog"]
+authors = [
+    {name = "ElectroNick_co"}
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Hardware",
+]
+dependencies = [
+    "smbus2>=0.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=3.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/electronick-co/tla2528-raspberry"
+Documentation = "https://github.com/electronick-co/tla2528-raspberry#readme"
+Repository = "https://github.com/electronick-co/tla2528-raspberry"
+"Bug Tracker" = "https://github.com/electronick-co/tla2528-raspberry/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+tla2528 = ["py.typed"]
